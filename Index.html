@@ -17,17 +17,18 @@
 
     <main class="search-container">
         <div class="logo-area">
-            <div class="frog-logo">🐸</div>
+            <div class="frog-logo">CN🐸</div>
             <h1 class="brand-name">RibbitSearch</h1>
             <p class="tagline">No tracking. Just jumping straight to results.</p>
         </div>
 
-        <form action="/search" method="GET" class="search-form">
+        <!-- Updated form to use JavaScript handling -->
+        <form id="ribbit-form" class="search-form">
             <div class="search-bar-wrapper">
                 <span class="search-icon">🔍</span>
                 <input 
                     type="search" 
-                    name="q" 
+                    id="search-query"
                     class="search-input" 
                     placeholder="Search the pond securely..." 
                     autocomplete="off" 
@@ -60,5 +61,24 @@
     <footer>
         <p>&copy; 2026 RibbitSearch. Keeping your data safe in the deep pond.</p>
     </footer>
+
+    <!-- Form redirection script -->
+    <script>
+        document.getElementById('ribbit-form').addEventListener('submit', function(event) {
+            // Prevent the default browser form submission page reload
+            event.preventDefault(); 
+            
+            // Get user query and trim empty spaces
+            const query = document.getElementById('search-query').value.trim();
+            
+            if (query) {
+                // Securely forward query to DuckDuckGo (privacy-focused engine)
+                const searchUrl = `https://duckduckgo.com{encodeURIComponent(query)}`;
+                
+                // Redirect user seamlessly to results
+                window.location.href = searchUrl;
+            }
+        });
+    </script>
 </body>
 </html>
