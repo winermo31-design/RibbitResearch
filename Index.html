@@ -1,1 +1,13 @@
+<!-- The form now targets our built-in results frame -->
+<form id="ribbit-form" class="search-form" action="https://google.com" method="get" target="built-in-results">
+    <div class="search-bar-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="search" id="search-query" class="search-input" name="q" placeholder="Search the pond securely..." autocomplete="off" autofocus required>
+    </div>
+    <button type="submit" class="search-btn">Ribbit</button>
+</form>
 
+<!-- This container holds your built-in search results frame -->
+<div class="results-container">
+    <iframe name="built-in-results" class="results-frame" title="Search Results"></iframe>
+</div>
