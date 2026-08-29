@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RibbitSearch - Privacy First</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-right">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#privacy" class="nav-link">Privacy Policy</a>
+            <button class="settings-btn" aria-label="Settings">⚙️</button>
+        </div>
+    </header>
+
+    <main class="search-container">
+        <div class="logo-area">
+            <div class="frog-logo">🐸</div>
+            <h1 class="brand-name">RibbitSearch</h1>
+            <p class="tagline">No tracking. Just jumping straight to results.</p>
+        </div>
+
+        <form action="/search" method="GET" class="search-form">
+            <div class="search-bar-wrapper">
+                <span class="search-icon">🔍</span>
+                <input 
+                    type="search" 
+                    name="q" 
+                    class="search-input" 
+                    placeholder="Search the pond securely..." 
+                    autocomplete="off" 
+                    autofocus 
+                    required
+                >
+                <button type="submit" class="search-btn">Ribbit</button>
+            </div>
+        </form>
+
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Zero Tracking</h3>
+                <p>We do not store your IP or search history.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🍪</div>
+                <h3>Cookie Free</h3>
+                <p>No tracking cookies are dropped on your lilypad.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Encrypted</h3>
+                <p>All queries are fully encrypted end-to-end.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 RibbitSearch. Keeping your data safe in the deep pond.</p>
+    </footer>
+</body>
+</html>
